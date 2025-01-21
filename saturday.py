@@ -27,3 +27,24 @@ def first_and_last(a_list):
     return [a_list[0], a_list[len(a_list) -1]]
 
 print(first_and_last(a_list = random.sample(range(1,30),29)))
+
+#fibonacci sequnce
+
+def fibonacci():
+    num = int(input('How many numbers'))
+    n  = 1
+    if num == 0:
+        fib =[]
+    elif num == 1:
+        fib = [1]
+    elif num == 2:
+        fib = [1,1]
+    elif num > 2:
+        fib = [1,1]
+        while n < (num -1):
+            fib.append(fib[n] + fib[n-1])
+            n +=1
+    return fib
+
+print(fibonacci())
+input()
